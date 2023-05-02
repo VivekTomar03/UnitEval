@@ -18,7 +18,7 @@ postRouter.get("/" , async(req,res) => {
         res.send(data)
     }
     else {
-        const data = await PostModel.find()
+        const data = await PostModel.find({postID:req.body.postID})
         res.send(data)
     }
 
